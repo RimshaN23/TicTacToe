@@ -46,6 +46,11 @@ class MainActivity : AppCompatActivity() {
                 btnCurrent.text = "X"
                 btnCurrent.setBackgroundResource(R.drawable.background_x)
                 flag = 1
+            }
+            else if (flag == 3) {
+                btnCurrent.text = ""
+                btnCurrent.setBackgroundResource(R.color.grey)
+                flag = 1
             } else {
                 btnCurrent.text = "O"
                 btnCurrent.setBackgroundResource(R.drawable.background_o)
@@ -66,31 +71,40 @@ class MainActivity : AppCompatActivity() {
             if (b1 == b2 && b2 == b3 && b3 != "") {
                 Toast.makeText(this, "Winner is: $b1", Toast.LENGTH_SHORT).show()
                 playAgain.visibility= View.VISIBLE
+                flag=3
             } else if (b4 == b5 && b5 == b6 && b6 != "") {
                 Toast.makeText(this, "Winner is: $b4", Toast.LENGTH_SHORT).show()
                 playAgain.visibility= View.VISIBLE
+                flag=3
             } else if (b7 == b8 && b8 == b9 && b9 != "") {
                 Toast.makeText(this, "Winner is: $b7", Toast.LENGTH_SHORT).show()
                 playAgain.visibility= View.VISIBLE
+                flag=3
             } else if (b1 == b4 && b4 == b7 && b7 != "") {
                 Toast.makeText(this, "Winner is: $b1", Toast.LENGTH_SHORT).show()
                 playAgain.visibility= View.VISIBLE
+                flag=3
             } else if (b2 == b5 && b5 == b8 && b8 != "") {
                 Toast.makeText(this, "Winner is: $b2", Toast.LENGTH_SHORT).show()
                 playAgain.visibility= View.VISIBLE
+                flag=3
             } else if (b3 == b6 && b6 == b9 && b9 != "") {
                 Toast.makeText(this, "Winner is: $b3", Toast.LENGTH_SHORT).show()
                 playAgain.visibility= View.VISIBLE
+                flag=3
             } else if (b1 == b5 && b5 == b9 && b9 != "") {
                 Toast.makeText(this, "Winner is: $b1", Toast.LENGTH_SHORT).show()
                 playAgain.visibility= View.VISIBLE
+                flag=3
             } else if (b3 == b5 && b5 == b7 && b7 != "") {
                 Toast.makeText(this, "Winner is: $b3", Toast.LENGTH_SHORT).show()
                 playAgain.visibility= View.VISIBLE
+                flag=3
 
             }else if (count ==9) {
                 Toast.makeText(this, "Match Drawn", Toast.LENGTH_SHORT).show()
                 playAgain.visibility= View.VISIBLE
+                flag=3
             }
         }
 
