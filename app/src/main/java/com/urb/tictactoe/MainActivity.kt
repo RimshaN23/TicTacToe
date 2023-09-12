@@ -105,7 +105,6 @@ class MainActivity : AppCompatActivity() {
                 Toast.makeText(this, "Match Drawn", Toast.LENGTH_SHORT).show()
                 playAgain.visibility= View.VISIBLE
                 flag=3
-
             }
         }
 
